@@ -22,29 +22,6 @@ void main() {
       expect(message.getFormattedDate(), 'Apr 10');
     });
 
-    test('date should be formatted as jm format', () async {
-      final date = DateTime.now();
-
-      var month = '${date.month}';
-      if (date.month < 10) {
-        month = '0${date.month}';
-      } else {
-        month = '${date.month}';
-      }
-
-      final format = '${date.year}-$month-${date.day} 22:18:04Z';
-      final message = Email(
-        sender: 'Ralph Edwards',
-        subject: 'The results to our user testing',
-        messagePreview: 'What is the progress on that task?',
-        isFavorite: false,
-        date: DateTime.parse(format),
-        image: '',
-        attachments: [],
-      );
-      expect(message.getFormattedDate(), '10:18 PM');
-    });
-
     test('should return N/A when sender has empty name', () async {
       final name = '';
       final expected = 'N/A';
