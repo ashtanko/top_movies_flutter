@@ -1,11 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:injectable/injectable.dart';
 import 'package:top_movies_flutter/models/email.dart';
 import 'package:top_movies_flutter/repository/email_list_repository.dart';
-import 'package:injectable/injectable.dart';
 
 part 'email_list_event.dart';
-
 part 'email_list_state.dart';
 
 @injectable

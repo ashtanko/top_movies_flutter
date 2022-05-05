@@ -7,10 +7,12 @@ dart_code_metrics:
   metrics:
     cyclomatic-complexity: 20
     maximum-nesting-level: 5
-    number-of-parameters: 4
+    number-of-parameters: 7
     source-lines-of-code: 50
   metrics-exclude:
     - test/**
+    - lib/models/*.g.*
+    - lib/models/*.freezed.*
   rules:
     - newline-before-return
     - no-boolean-literal-compare
@@ -25,6 +27,8 @@ analyzer:
     - lib/generated/**
     - lib/di/injectable.config.dart
     - test/*.mocks.dart
+    - lib/models/*.g.*
+    - lib/models/*.freezed.*
   strong-mode:
     implicit-casts: false
   language:

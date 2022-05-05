@@ -1,9 +1,9 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
-import 'package:top_movies_flutter/bloc/theme_cubit.dart';
-import 'package:top_movies_flutter/theme/style.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:top_movies_flutter/bloc/theme_cubit.dart';
+import 'package:top_movies_flutter/theme/style.dart';
 
 import '../helpers/hydrated.dart';
 

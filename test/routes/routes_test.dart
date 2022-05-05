@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:top_movies_flutter/index.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:top_movies_flutter/index.dart';
 
 void main() {
   group('Routes Tests', () {

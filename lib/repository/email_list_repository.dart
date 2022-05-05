@@ -1,5 +1,5 @@
-import 'package:top_movies_flutter/models/email.dart';
 import 'package:injectable/injectable.dart';
+import 'package:top_movies_flutter/models/email.dart';
 
 const _delay = Duration(milliseconds: 1000);
 

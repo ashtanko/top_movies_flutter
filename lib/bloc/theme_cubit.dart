@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:top_movies_flutter/index.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:injectable/injectable.dart';
+import 'package:top_movies_flutter/index.dart';
 
 enum ThemeState { light, dark, yellow, system }
 

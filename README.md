@@ -1,4 +1,4 @@
-# top 250 movies 🤖
+# top 250 movies 🤖 WIP
 Yet another pet project
 
 This template is focused on delivering a project with **static analysis** and **continuous integration** already in place.
