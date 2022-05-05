@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'movie.dart';
@@ -12,11 +11,46 @@ part of 'movie.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Movie _$MovieFromJson(Map<String, dynamic> json) {
   return _Movie.fromJson(json);
 }
+
+/// @nodoc
+class _$MovieTearOff {
+  const _$MovieTearOff();
+
+  _Movie call(
+      {required String id,
+      String? rank,
+      String? title,
+      String? fullTitle,
+      String? year,
+      String? image,
+      String? crew,
+      String? imDbRating,
+      String? imDbRatingCount}) {
+    return _Movie(
+      id: id,
+      rank: rank,
+      title: title,
+      fullTitle: fullTitle,
+      year: year,
+      image: image,
+      crew: crew,
+      imDbRating: imDbRating,
+      imDbRatingCount: imDbRatingCount,
+    );
+  }
+
+  Movie fromJson(Map<String, Object?> json) {
+    return Movie.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Movie = _$MovieTearOff();
 
 /// @nodoc
 mixin _$Movie {
@@ -250,7 +284,6 @@ class _$_Movie implements _Movie {
                 .equals(other.imDbRatingCount, imDbRatingCount));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -277,36 +310,36 @@ class _$_Movie implements _Movie {
 
 abstract class _Movie implements Movie {
   const factory _Movie(
-      {required final String id,
-      final String? rank,
-      final String? title,
-      final String? fullTitle,
-      final String? year,
-      final String? image,
-      final String? crew,
-      final String? imDbRating,
-      final String? imDbRatingCount}) = _$_Movie;
+      {required String id,
+      String? rank,
+      String? title,
+      String? fullTitle,
+      String? year,
+      String? image,
+      String? crew,
+      String? imDbRating,
+      String? imDbRatingCount}) = _$_Movie;
 
   factory _Movie.fromJson(Map<String, dynamic> json) = _$_Movie.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String? get rank => throw _privateConstructorUsedError;
+  String? get rank;
   @override
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
-  String? get fullTitle => throw _privateConstructorUsedError;
+  String? get fullTitle;
   @override
-  String? get year => throw _privateConstructorUsedError;
+  String? get year;
   @override
-  String? get image => throw _privateConstructorUsedError;
+  String? get image;
   @override
-  String? get crew => throw _privateConstructorUsedError;
+  String? get crew;
   @override
-  String? get imDbRating => throw _privateConstructorUsedError;
+  String? get imDbRating;
   @override
-  String? get imDbRatingCount => throw _privateConstructorUsedError;
+  String? get imDbRatingCount;
   @override
   @JsonKey(ignore: true)
   _$MovieCopyWith<_Movie> get copyWith => throw _privateConstructorUsedError;
