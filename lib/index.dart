@@ -1,6 +1,8 @@
 export 'bloc/email_list/email_list_bloc.dart';
 export 'bloc/theme_cubit.dart';
 export 'constants/index.dart';
+export 'data/network/network.dart';
+export 'data/service/service.dart';
 export 'di/di.dart';
 export 'models/models.dart';
 export 'repository/repository.dart';
