@@ -1,4 +1,4 @@
-import 'package:flutter_bloc_app_template/models/email.dart';
+import 'package:top_movies_flutter/models/email.dart';
 import 'package:injectable/injectable.dart';
 
 const _delay = Duration(milliseconds: 1000);

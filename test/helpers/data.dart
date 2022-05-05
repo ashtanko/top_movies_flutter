@@ -1,4 +1,4 @@
-import 'package:flutter_bloc_app_template/index.dart';
+import 'package:top_movies_flutter/index.dart';
 
 final mockEmails = [
   Email(

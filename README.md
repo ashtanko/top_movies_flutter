@@ -1,5 +1,5 @@
-# flutter-bloc-app-template 🤖
-The project of the empty template with Flutter has built the basic framework to realize the functions of internationalization, theme peeling etc.
+# top 250 movies 🤖
+Yet another pet project
 
 This template is focused on delivering a project with **static analysis** and **continuous integration** already in place.
 
@@ -74,20 +74,13 @@ make localize
 check
 ```
 
-## Reminders 🧠
-Change name in pubspec.yaml file
-
-Remove anything you don't need
-
-Configure analysis_options.yaml for your needs
-
 ## Contributing 🤝
 
 Feel free to open a issue or submit a pull request for any bugs/improvements.
 
 ## License 📄
 
-This template is licensed under the MIT License - see the [License](LICENSE) file for details.
+This project is licensed under the MIT License - see the [License](LICENSE) file for details.
 Please note that the generated template is offering to start with a MIT license but you can change it to whatever you wish, as long as you attribute under the MIT terms that you're using the template.
 
 [lint-style-badge]: https://img.shields.io/badge/style-lint-4BC0F5.svg

@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_app_template/app.dart';
-import 'package:flutter_bloc_app_template/di/di.dart';
+import 'package:top_movies_flutter/app.dart';
+import 'package:top_movies_flutter/di/di.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 

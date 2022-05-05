@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_app_template/generated/l10n.dart';
-import 'package:flutter_bloc_app_template/index.dart';
+import 'package:top_movies_flutter/generated/l10n.dart';
+import 'package:top_movies_flutter/index.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

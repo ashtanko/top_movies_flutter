@@ -1,4 +1,4 @@
-import 'package:flutter_bloc_app_template/di/injectable.config.dart';
+import 'package:top_movies_flutter/di/injectable.config.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
