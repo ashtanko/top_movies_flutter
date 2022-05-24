@@ -5,6 +5,9 @@
 import 'dart:async' as _i3;
 
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:top_movies_flutter/data/datasource/remote_data_source.dart'
+    as _i5;
+import 'package:top_movies_flutter/data/models/movie_model.dart' as _i6;
 import 'package:top_movies_flutter/domain/entity/movie.dart' as _i4;
 import 'package:top_movies_flutter/domain/repository/movie_list_repository.dart'
     as _i2;
@@ -33,4 +36,19 @@ class MockMovieListRepository extends _i1.Mock
       (super.noSuchMethod(Invocation.method(#getMovies, []),
               returnValue: Future<List<_i4.Movie>>.value(<_i4.Movie>[]))
           as _i3.Future<List<_i4.Movie>>);
+}
+
+/// A class which mocks [RemoteDataSource].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockRemoteDataSource extends _i1.Mock implements _i5.RemoteDataSource {
+  MockRemoteDataSource() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i3.Future<List<_i6.MovieModel>> getMovies() => (super.noSuchMethod(
+          Invocation.method(#getMovies, []),
+          returnValue: Future<List<_i6.MovieModel>>.value(<_i6.MovieModel>[]))
+      as _i3.Future<List<_i6.MovieModel>>);
 }
