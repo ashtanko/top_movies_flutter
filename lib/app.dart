@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
           create: (context) => getIt.get<ThemeCubit>(),
         ),
         BlocProvider(
-          create: (context) => getIt.get<EmailListBloc>()
+          create: (context) => getIt.get<MovieListBloc>()
             ..add(
-              EmailListFetched(),
+              const MovieListEvent.load(),
             ),
         ),
       ],

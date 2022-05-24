@@ -7,7 +7,7 @@
   "@itemsTitle": {
     "description": "The title of the sample items"
   },
-  "messagesTitle": "Messages",
+  "messagesTitle": "Movies",
   "@messagesTitle": {
     "description": "The title of the messages screen"
   },

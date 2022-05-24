@@ -30,6 +30,8 @@ dependencies:
   gap: ^2.0.0
   #freezed_annotation: ^2.0.1
   hive: ^2.1.0
+  vibration: ^1.7.4-nullsafety.0
+  cached_network_image: 3.2.0
 
   flutter_localizations:
     sdk: flutter

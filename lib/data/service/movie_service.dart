@@ -9,13 +9,13 @@ class MovieService {
   final DioClient _dioClient;
   final Logger _logger;
 
-  Future<List<Movie>> getMovies() async {
+  Future<List<MovieModel>> getMovies() async {
     try {
       var response = await _dioClient.get(
         Endpoints.live,
       ) as Map<String, dynamic>;
 
-      return Movies.fromJson(response).movies;
+      return MoviesModel.fromJson(response).movies;
     } catch (e) {
       _logger.e(e);
       rethrow;

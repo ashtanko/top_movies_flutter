@@ -5,8 +5,8 @@
 import 'dart:async' as _i3;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:top_movies_flutter/models/email.dart' as _i4;
-import 'package:top_movies_flutter/repository/email_list_repository.dart'
+import 'package:top_movies_flutter/domain/entity/movie.dart' as _i4;
+import 'package:top_movies_flutter/domain/repository/movie_list_repository.dart'
     as _i2;
 
 // ignore_for_file: type=lint
@@ -19,18 +19,18 @@ import 'package:top_movies_flutter/repository/email_list_repository.dart'
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 
-/// A class which mocks [EmailListRepository].
+/// A class which mocks [MovieListRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockEmailListRepository extends _i1.Mock
-    implements _i2.EmailListRepository {
-  MockEmailListRepository() {
+class MockMovieListRepository extends _i1.Mock
+    implements _i2.MovieListRepository {
+  MockMovieListRepository() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.Future<List<_i4.Email>> loadData() =>
-      (super.noSuchMethod(Invocation.method(#loadData, []),
-              returnValue: Future<List<_i4.Email>>.value(<_i4.Email>[]))
-          as _i3.Future<List<_i4.Email>>);
+  _i3.Future<List<_i4.Movie>> getMovies() =>
+      (super.noSuchMethod(Invocation.method(#getMovies, []),
+              returnValue: Future<List<_i4.Movie>>.value(<_i4.Movie>[]))
+          as _i3.Future<List<_i4.Movie>>);
 }

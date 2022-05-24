@@ -11,10 +11,10 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const Settings(),
           );
-        case EmailListScreen.routeName:
+        case MovieListScreen.routeName:
           return MaterialPageRoute(
             settings: routeSettings,
-            builder: (_) => const EmailListScreen(),
+            builder: (_) => const MovieListScreen(),
           );
         default:
           return errorRoute(routeSettings);

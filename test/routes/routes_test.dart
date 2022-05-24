@@ -13,10 +13,10 @@ void main() {
         expect(route.settings.name, expected);
       });
 
-      test('returns email list screen route', () {
-        final expected = EmailListScreen.routeName;
+      test('returns movie list screen route', () {
+        final expected = MovieListScreen.routeName;
         final route = Routes.generateRoute(
-          const RouteSettings(name: EmailListScreen.routeName),
+          const RouteSettings(name: MovieListScreen.routeName),
         );
         expect(route.settings.name, expected);
       });

@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
+import 'package:top_movies_flutter/data/network/interceptor/api_key_interceptor.dart';
 import 'package:top_movies_flutter/data/network/network.dart';
 
 @module
@@ -12,9 +13,13 @@ abstract class NetworkModule {
   );
 
   @factoryMethod
-  Dio provideDio(LoggingInterceptor loggingInterceptor, Logger logger) {
+  Dio provideDio(
+    LoggingInterceptor loggingInterceptor,
+    ApiKeyInterceptor apiKeyInterceptor,
+    Logger logger,
+  ) {
     return Dio()
       ..options = _options
-      ..interceptors.add(loggingInterceptor);
+      ..interceptors.addAll([loggingInterceptor, apiKeyInterceptor]);
   }
 }

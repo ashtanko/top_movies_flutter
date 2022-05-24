@@ -12,9 +12,10 @@ class LoggingInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     if (kDebugMode) {
-      _logger
-        ..d(options.data)
-        ..d(options.headers);
+      final str = 'uri: ${options.uri}\n'
+          'data: ${options.data}\n'
+          'headers: ${options.headers}';
+      _logger.d(str);
     }
     super.onRequest(options, handler);
   }

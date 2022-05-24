@@ -1,67 +1,27 @@
-import 'package:top_movies_flutter/index.dart';
+import 'package:top_movies_flutter/domain/entity/movie.dart';
 
-final mockEmails = [
-  Email(
-    sender: 'Ralph Edwards',
-    subject: 'The results to our user testing',
-    messagePreview: 'What is the progress on that task?',
-    isFavorite: false,
-    date: DateTime.parse('2022-04-10 20:18:04Z'),
+final mockMovies = [
+  const Movie(
+    id: 'tt0111161',
+    rank: '1',
+    title: 'The Shawshank Redemption',
+    fullTitle: 'The Shawshank Redemption (1994)',
+    year: '1994',
     image:
-        'https://external-preview.redd.it/STUmd55tKPrA-gq3y2wqicFTkWL-7oUij0SazqkGylE.jpg?auto=webp&s=6b1cd0e4976a852c9a805cf54a7bb7a19d169063',
-    attachments: [],
+        'https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX128_CR0,3,128,176_AL_.jpg',
+    crew: 'Frank Darabont (dir.), Tim Robbins, Morgan Freeman',
+    imDbRating: '9.2',
+    imDbRatingCount: '2533865',
   ),
-  Email(
-    sender: 'Eleanor Pena',
-    subject: 'Some notes',
-    messagePreview: 'Yeah! You are right.',
-    isFavorite: true,
-    date: DateTime.parse('2022-04-09 18:18:04Z'),
-    image:
-        'https://i.pinimg.com/originals/f5/c3/2f/f5c32f69aa941b6fc529d193035ccf86.jpg',
-    attachments: [],
-  ),
-  Email(
-    sender: 'Leslie Alexander',
-    subject: 'Your account with us',
-    messagePreview: "What's the progress on that task?",
-    isFavorite: false,
-    date: DateTime.now(),
-    image:
-        'https://m.media-amazon.com/images/M/MV5BMTE0NjYyNjQ2NDheQTJeQWpwZ15BbWU4MDk0MTM0ODUz._V1_.jpg',
-    attachments: [
-      Attachment(AttachmentType.doc, 'cv'),
-      Attachment(AttachmentType.pdf, 'payment'),
-    ],
-  ),
-  Email(
-    sender: 'Jenny Wilson',
-    subject: 'The results to our user testing',
-    messagePreview: 'I hope it goes well.',
-    isFavorite: false,
-    date: DateTime.parse('2022-03-15 12:18:04Z'),
-    image:
-        'https://i.pinimg.com/originals/0b/51/22/0b51226bbb02062695d644030b81f88c.jpg',
-    attachments: [
-      Attachment(AttachmentType.doc, 'recipe'),
-    ],
-  ),
-  Email(
-    sender: 'Cameron Williamson',
-    subject: "Don't make this bad",
-    messagePreview: "Yeah! You're right.",
-    isFavorite: true,
-    date: DateTime.parse('2022-02-01 14:18:04Z'),
-    image: 'https://www.gdnonline.com/gdnimages/20161122/201611221138141.JPG',
-    attachments: [],
-  ),
-  Email(
-    sender: 'No Name',
-    subject: 'Sure',
-    messagePreview: 'Ok!',
-    isFavorite: true,
-    date: DateTime.parse('2022-01-01 09:18:04Z'),
-    image: '',
-    attachments: [],
-  ),
+  const Movie(
+      id: 'tt0068646',
+      rank: '2',
+      title: 'The Godfather',
+      fullTitle: 'The Godfather (1972)',
+      year: '1972',
+      image:
+          'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX128_CR0,1,128,176_AL_.jpg',
+      crew: 'Francis Ford Coppola (dir.), Marlon Brando, Al Pacino',
+      imDbRating: '9.1',
+      imDbRatingCount: '1744224')
 ];

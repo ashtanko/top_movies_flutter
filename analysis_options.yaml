@@ -11,8 +11,9 @@ dart_code_metrics:
     source-lines-of-code: 50
   metrics-exclude:
     - test/**
-    - lib/models/*.g.*
-    - lib/models/*.freezed.*
+    - lib/**/*.g.*
+    - lib/**/*.freezed.*
+    - lib/generated/**
   rules:
     - newline-before-return
     - no-boolean-literal-compare
@@ -27,8 +28,8 @@ analyzer:
     - lib/generated/**
     - lib/di/injectable.config.dart
     - test/*.mocks.dart
-    - lib/models/*.g.*
-    - lib/models/*.freezed.*
+    - lib/**/*.g.*
+    - lib/**/*.freezed.*
   strong-mode:
     implicit-casts: false
   language:
@@ -45,7 +46,6 @@ linter:
   rules:
     - always_declare_return_types
     - close_sinks
-    - one_member_abstracts
     - prefer_final_in_for_each
     - annotate_overrides
     - avoid_empty_else

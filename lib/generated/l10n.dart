@@ -70,10 +70,10 @@ class S {
     );
   }
 
-  /// `Messages`
+  /// `Movies`
   String get messagesTitle {
     return Intl.message(
-      'Messages',
+      'Movies',
       name: 'messagesTitle',
       desc: 'The title of the messages screen',
       args: [],
