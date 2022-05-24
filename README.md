@@ -23,6 +23,7 @@ integration** already in place.
 - CI Setup with GitHub Actions
 - Codecov Setup with GitHub Actions
 - Unit test coverage
+- Widget test coverage
 
 ## Android Screenshots
 
