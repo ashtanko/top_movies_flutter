@@ -1,24 +1,16 @@
+import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:logger/logger.dart';
+import 'package:retrofit/retrofit.dart';
 import 'package:top_movies_flutter/index.dart';
 
-@lazySingleton
-class MovieService {
-  MovieService(this._dioClient, this._logger);
+part 'movie_service.g.dart';
 
-  final DioClient _dioClient;
-  final Logger _logger;
+@RestApi(baseUrl: NetworkConfig.baseUrl)
+@injectable
+abstract class MovieService {
+  @factoryMethod
+  factory MovieService(Dio dio) = _MovieService;
 
-  Future<List<MovieModel>> getMovies() async {
-    try {
-      var response = await _dioClient.get(
-        Endpoints.live,
-      ) as Map<String, dynamic>;
-
-      return MoviesModel.fromJson(response).movies;
-    } catch (e) {
-      _logger.e(e);
-      rethrow;
-    }
-  }
+  @GET('/API/Top250Movies')
+  Future<MoviesModel> getMovies();
 }

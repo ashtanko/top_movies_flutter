@@ -1,4 +1,6 @@
 export 'getit.dart';
 export 'injectable.dart';
-export 'logger_module.dart';
-export 'network_module.dart';
+export 'modules/logger_module.dart';
+export 'modules/logger_module.dart';
+export 'modules/network_module.dart';
+export 'modules/repository_module.dart';

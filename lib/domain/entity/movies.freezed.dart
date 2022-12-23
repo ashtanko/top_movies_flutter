@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'movies.dart';
@@ -17,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$MoviesTearOff {
   const _$MoviesTearOff();
 
-  _Movies call({List<Movie> movies = const []}) {
+  _Movies call({@JsonKey(name: 'items') List<Movie> movies = const []}) {
     return _Movies(
       movies: movies,
     );
@@ -29,6 +30,7 @@ const $Movies = _$MoviesTearOff();
 
 /// @nodoc
 mixin _$Movies {
+  @JsonKey(name: 'items')
   List<Movie> get movies => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -39,7 +41,7 @@ mixin _$Movies {
 abstract class $MoviesCopyWith<$Res> {
   factory $MoviesCopyWith(Movies value, $Res Function(Movies) then) =
       _$MoviesCopyWithImpl<$Res>;
-  $Res call({List<Movie> movies});
+  $Res call({@JsonKey(name: 'items') List<Movie> movies});
 }
 
 /// @nodoc
@@ -68,7 +70,7 @@ abstract class _$MoviesCopyWith<$Res> implements $MoviesCopyWith<$Res> {
   factory _$MoviesCopyWith(_Movies value, $Res Function(_Movies) then) =
       __$MoviesCopyWithImpl<$Res>;
   @override
-  $Res call({List<Movie> movies});
+  $Res call({@JsonKey(name: 'items') List<Movie> movies});
 }
 
 /// @nodoc
@@ -96,10 +98,10 @@ class __$MoviesCopyWithImpl<$Res> extends _$MoviesCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Movies implements _Movies {
-  const _$_Movies({this.movies = const []});
+  const _$_Movies({@JsonKey(name: 'items') this.movies = const []});
 
-  @JsonKey()
   @override
+  @JsonKey(name: 'items')
   final List<Movie> movies;
 
   @override
@@ -126,9 +128,11 @@ class _$_Movies implements _Movies {
 }
 
 abstract class _Movies implements Movies {
-  const factory _Movies({List<Movie> movies}) = _$_Movies;
+  const factory _Movies({@JsonKey(name: 'items') List<Movie> movies}) =
+      _$_Movies;
 
   @override
+  @JsonKey(name: 'items')
   List<Movie> get movies;
   @override
   @JsonKey(ignore: true)

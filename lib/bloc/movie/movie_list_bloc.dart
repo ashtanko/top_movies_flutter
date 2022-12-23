@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:logger/logger.dart';
 import 'package:top_movies_flutter/domain/entity/movie.dart';
 import 'package:top_movies_flutter/domain/repository/movie_list_repository.dart';
 
@@ -12,7 +13,10 @@ part 'movie_list_state.dart';
 
 @injectable
 class MovieListBloc extends Bloc<MovieListEvent, MovieListState> {
-  MovieListBloc(this._movieRepository) : super(const MovieListState.initial()) {
+  MovieListBloc(
+    this._movieRepository,
+    this._logger,
+  ) : super(const MovieListState.initial()) {
     on<MovieListEvent>(
       (event, emit) => event.map(
         load: (e) => _onLoad(emit, e),
@@ -21,6 +25,7 @@ class MovieListBloc extends Bloc<MovieListEvent, MovieListState> {
   }
 
   final MovieListRepository _movieRepository;
+  final Logger _logger;
 
   Future<void> _onLoad(
     Emitter<MovieListState> emit,
@@ -36,6 +41,7 @@ class MovieListBloc extends Bloc<MovieListEvent, MovieListState> {
         emit(MovieListState.loaded(movies: movies));
       }
     } on Exception catch (e) {
+      _logger.e(e);
       emit(MovieListState.error(exception: e));
     }
   }

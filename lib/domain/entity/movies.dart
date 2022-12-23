@@ -6,6 +6,6 @@ part 'movies.freezed.dart';
 @freezed
 class Movies with _$Movies {
   const factory Movies({
-    @Default([]) List<Movie> movies,
+    @JsonKey(name: 'items') @Default([]) List<Movie> movies,
   }) = _Movies;
 }

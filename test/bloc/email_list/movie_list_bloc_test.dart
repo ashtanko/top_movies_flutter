@@ -1,9 +1,11 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:logger/logger.dart';
 import 'package:mockito/mockito.dart';
 import 'package:top_movies_flutter/bloc/movie/movie_list_bloc.dart';
 import 'package:top_movies_flutter/domain/repository/movie_list_repository.dart';
 import 'package:top_movies_flutter/index.dart';
+import 'package:top_movies_flutter/util/logger.dart';
 
 import '../../helpers/data.dart';
 import '../../mocks.dart';
@@ -60,7 +62,7 @@ void main() {
 
     setUp(() {
       repository = MockMovieListRepository();
-      bloc = MovieListBloc(repository);
+      bloc = MovieListBloc(repository, createLogger(level: Level.verbose));
     });
 
     tearDown(() => bloc.close());

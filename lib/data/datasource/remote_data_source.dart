@@ -6,14 +6,16 @@ abstract class RemoteDataSource {
   Future<List<MovieModel>> getMovies();
 }
 
-@lazySingleton
+@injectable
 class RemoteDataSourceImpl implements RemoteDataSource {
   RemoteDataSourceImpl(this.service);
 
   final MovieService service;
 
   @override
-  Future<List<MovieModel>> getMovies() {
-    return service.getMovies();
+  Future<List<MovieModel>> getMovies() async {
+    final movies = await service.getMovies();
+
+    return movies.movies;
   }
 }
