@@ -58,5 +58,8 @@ class MovieModel extends Equatable {
         crew: crew,
         imDbRating: imDbRating,
         imDbRatingCount: imDbRatingCount,
+        releaseDate: year,
+        voteAverage: double.parse(imDbRating ?? '0'),
+        overview: fullTitle,
       );
 }

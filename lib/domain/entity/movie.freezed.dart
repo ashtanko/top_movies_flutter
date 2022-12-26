@@ -27,7 +27,10 @@ class _$MovieTearOff {
       String? image,
       String? crew,
       String? imDbRating,
-      String? imDbRatingCount}) {
+      String? imDbRatingCount,
+      String? releaseDate,
+      double? voteAverage,
+      String? overview}) {
     return _Movie(
       id: id,
       rank: rank,
@@ -38,6 +41,9 @@ class _$MovieTearOff {
       crew: crew,
       imDbRating: imDbRating,
       imDbRatingCount: imDbRatingCount,
+      releaseDate: releaseDate,
+      voteAverage: voteAverage,
+      overview: overview,
     );
   }
 }
@@ -56,6 +62,9 @@ mixin _$Movie {
   String? get crew => throw _privateConstructorUsedError;
   String? get imDbRating => throw _privateConstructorUsedError;
   String? get imDbRatingCount => throw _privateConstructorUsedError;
+  String? get releaseDate => throw _privateConstructorUsedError;
+  double? get voteAverage => throw _privateConstructorUsedError;
+  String? get overview => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MovieCopyWith<Movie> get copyWith => throw _privateConstructorUsedError;
@@ -74,7 +83,10 @@ abstract class $MovieCopyWith<$Res> {
       String? image,
       String? crew,
       String? imDbRating,
-      String? imDbRatingCount});
+      String? imDbRatingCount,
+      String? releaseDate,
+      double? voteAverage,
+      String? overview});
 }
 
 /// @nodoc
@@ -96,6 +108,9 @@ class _$MovieCopyWithImpl<$Res> implements $MovieCopyWith<$Res> {
     Object? crew = freezed,
     Object? imDbRating = freezed,
     Object? imDbRatingCount = freezed,
+    Object? releaseDate = freezed,
+    Object? voteAverage = freezed,
+    Object? overview = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -134,6 +149,18 @@ class _$MovieCopyWithImpl<$Res> implements $MovieCopyWith<$Res> {
           ? _value.imDbRatingCount
           : imDbRatingCount // ignore: cast_nullable_to_non_nullable
               as String?,
+      releaseDate: releaseDate == freezed
+          ? _value.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      voteAverage: voteAverage == freezed
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double?,
+      overview: overview == freezed
+          ? _value.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -152,7 +179,10 @@ abstract class _$MovieCopyWith<$Res> implements $MovieCopyWith<$Res> {
       String? image,
       String? crew,
       String? imDbRating,
-      String? imDbRatingCount});
+      String? imDbRatingCount,
+      String? releaseDate,
+      double? voteAverage,
+      String? overview});
 }
 
 /// @nodoc
@@ -175,6 +205,9 @@ class __$MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
     Object? crew = freezed,
     Object? imDbRating = freezed,
     Object? imDbRatingCount = freezed,
+    Object? releaseDate = freezed,
+    Object? voteAverage = freezed,
+    Object? overview = freezed,
   }) {
     return _then(_Movie(
       id: id == freezed
@@ -213,6 +246,18 @@ class __$MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
           ? _value.imDbRatingCount
           : imDbRatingCount // ignore: cast_nullable_to_non_nullable
               as String?,
+      releaseDate: releaseDate == freezed
+          ? _value.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      voteAverage: voteAverage == freezed
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double?,
+      overview: overview == freezed
+          ? _value.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -229,7 +274,10 @@ class _$_Movie implements _Movie {
       this.image,
       this.crew,
       this.imDbRating,
-      this.imDbRatingCount});
+      this.imDbRatingCount,
+      this.releaseDate,
+      this.voteAverage,
+      this.overview});
 
   @override
   final String id;
@@ -249,10 +297,16 @@ class _$_Movie implements _Movie {
   final String? imDbRating;
   @override
   final String? imDbRatingCount;
+  @override
+  final String? releaseDate;
+  @override
+  final double? voteAverage;
+  @override
+  final String? overview;
 
   @override
   String toString() {
-    return 'Movie(id: $id, rank: $rank, title: $title, fullTitle: $fullTitle, year: $year, image: $image, crew: $crew, imDbRating: $imDbRating, imDbRatingCount: $imDbRatingCount)';
+    return 'Movie(id: $id, rank: $rank, title: $title, fullTitle: $fullTitle, year: $year, image: $image, crew: $crew, imDbRating: $imDbRating, imDbRatingCount: $imDbRatingCount, releaseDate: $releaseDate, voteAverage: $voteAverage, overview: $overview)';
   }
 
   @override
@@ -270,7 +324,12 @@ class _$_Movie implements _Movie {
             const DeepCollectionEquality()
                 .equals(other.imDbRating, imDbRating) &&
             const DeepCollectionEquality()
-                .equals(other.imDbRatingCount, imDbRatingCount));
+                .equals(other.imDbRatingCount, imDbRatingCount) &&
+            const DeepCollectionEquality()
+                .equals(other.releaseDate, releaseDate) &&
+            const DeepCollectionEquality()
+                .equals(other.voteAverage, voteAverage) &&
+            const DeepCollectionEquality().equals(other.overview, overview));
   }
 
   @override
@@ -284,7 +343,10 @@ class _$_Movie implements _Movie {
       const DeepCollectionEquality().hash(image),
       const DeepCollectionEquality().hash(crew),
       const DeepCollectionEquality().hash(imDbRating),
-      const DeepCollectionEquality().hash(imDbRatingCount));
+      const DeepCollectionEquality().hash(imDbRatingCount),
+      const DeepCollectionEquality().hash(releaseDate),
+      const DeepCollectionEquality().hash(voteAverage),
+      const DeepCollectionEquality().hash(overview));
 
   @JsonKey(ignore: true)
   @override
@@ -302,7 +364,10 @@ abstract class _Movie implements Movie {
       String? image,
       String? crew,
       String? imDbRating,
-      String? imDbRatingCount}) = _$_Movie;
+      String? imDbRatingCount,
+      String? releaseDate,
+      double? voteAverage,
+      String? overview}) = _$_Movie;
 
   @override
   String get id;
@@ -322,6 +387,12 @@ abstract class _Movie implements Movie {
   String? get imDbRating;
   @override
   String? get imDbRatingCount;
+  @override
+  String? get releaseDate;
+  @override
+  double? get voteAverage;
+  @override
+  String? get overview;
   @override
   @JsonKey(ignore: true)
   _$MovieCopyWith<_Movie> get copyWith => throw _privateConstructorUsedError;

@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:top_movies_flutter/generated/l10n.dart';
 import 'package:top_movies_flutter/index.dart';
 
+import 'movie_card.dart';
+
 class MovieListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,26 +13,25 @@ class MovieListView extends StatelessWidget {
         duration: const Duration(milliseconds: 300),
         child: state.map(
           initial: (state) => const SizedBox(),
-          loading: (state) => const Center(child: CircularProgressIndicator()),
+          loading: (state) => ConstrainedBox(
+            constraints: BoxConstraints(
+              minWidth: MediaQuery.of(context).size.width,
+              minHeight: MediaQuery.of(context).size.height,
+            ),
+            child: const Center(
+              child: CircularProgressIndicator(),
+            ),
+          ),
           emptyList: (state) => Text(S.of(context).emptyList),
-          loaded: (state) => ListView.separated(
+          loaded: (state) => ListView.builder(
+            key: const Key('topMoviesListView'),
             padding: EdgeInsets.zero,
             shrinkWrap: true,
             primary: false,
-            itemBuilder: (context, index) => MovieListItem(
+            itemBuilder: (context, index) => ItemCard(
               movie: state.movies[index],
-              onTap: () {
-                print('click');
-              },
             ),
             itemCount: state.movies.length,
-            separatorBuilder: (BuildContext context, int index) {
-              return const Divider(
-                color: Colors.black12,
-                height: 1,
-                thickness: 1,
-              );
-            },
           ),
           error: (state) => ErrorScreen(),
         ),
